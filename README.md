@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Contentful + Next.js 15 Starter Template
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/docs)
+[![Contentful](https://img.shields.io/badge/Contentful-CF-blue?style=for-the-badge&logo=contentful)](https://www.contentful.com/developers/docs/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-0EA5E9?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/docs)
+[![Bun](https://img.shields.io/badge/Bun-FFD700?style=for-the-badge&logo=bun)](https://bun.sh/docs)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/docs/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint)](https://eslint.org/docs/latest/)
+[![CI/CD](https://img.shields.io/badge/CI/CD-A1A1A1?style=for-the-badge&logo=githubactions)](https://docs.github.com/en/actions)
+[![𝕏](https://img.shields.io/badge/X-AGIManifesto-black?style=for-the-badge&logo=x)](https://x.com/AGIManifesto)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-PatGPT-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/patgpt)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 About This Template
+
+A **fully-featured**, opinionated starter template for building modern web applications with **Next.js 15** and **Contentful**. Designed to optimize **performance, UX, and developer experience**.
+
+### 🛠️ Features
+
+✅ **Next.js 15** - The latest, with App Router & Server Components.
+✅ **Contentful CMS** - Seamlessly integrates with Contentful's headless CMS.
+✅ **Bun Package Manager** - Fast installs and runtime performance.
+✅ **Tailwind CSS** - Utility-first styling for rapid development.
+✅ **TypeScript** - Strongly typed, scalable, and maintainable.
+✅ **ESLint & Prettier** - Enforced code quality and consistency.
+✅ **next-i18n** - Internationalization support out of the box.
+✅ **CI/CD Integration** - Automated testing and deployments.
+✅ **Testing Support** - Ready-to-use configurations for Jest/Playwright.
+
+---
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
+
+```sh
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔥 Running the Dev Server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📜 Official Documentation & Resources
 
-To learn more about Next.js, take a look at the following resources:
+- 📘 **[Next.js Docs](https://nextjs.org/docs)**
+- 📘 **[Contentful Docs](https://www.contentful.com/developers/docs/)**
+- 📘 **[Tailwind CSS Docs](https://tailwindcss.com/docs)**
+- 📘 **[Bun Docs](https://bun.sh/docs)**
+- 📘 **[TypeScript Docs](https://www.typescriptlang.org/docs/)**
+- 📘 **[ESLint Docs](https://eslint.org/docs/latest/)**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Contributing
 
-## Deploy on Vercel
+Have ideas or found a bug? Open an issue or submit a PR! Check out our **[Issues](https://github.com/patgpt/next-template/issues)** for discussion.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🚀 Happy coding! 🎨
