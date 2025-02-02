@@ -1,0 +1,15 @@
+---
+name: "🙋‍♂️ Question"
+description: "Ask a question related to this project."
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: "### ❓ Question\nAsk your question clearly and concisely."
+  - type: textarea
+    id: question-details
+    attributes:
+      label: "Your Question"
+      description: "Provide a detailed question."
+    validations:
+      required: true
