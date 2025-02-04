@@ -157,5 +157,7 @@
   },
   // GRAPHQL/Typescript Codegen
 
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "graphql-config.load.rootDir": "./../",
+  "graphql-config.load.filepath": "graphql.config.{json,yaml,yml,js,ts,toml}"
 }

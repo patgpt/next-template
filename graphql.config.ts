@@ -1,7 +1,9 @@
 import dotenv from 'dotenv'
 import type { IGraphQLConfig } from 'graphql-config'
 
-dotenv.config()
+dotenv.config({
+  path: '.env'
+})
 
 const config: IGraphQLConfig = {
   schema: [
@@ -15,13 +17,14 @@ const config: IGraphQLConfig = {
     },
     '@/src/graphql/_generated_/graphql.schema.graphql'
   ],
-  documents: ['@/src/graphql/_generated_/**/*.{graphql,gql}'],
-  projects: {
-    default: {
-      schema: '@/src/graphql/_generated_/graphql.schema.graphql',
-      documents: ['@/src/graphql/_generated_/**/*.{graphql,gql}']
-    }
-  }
+  documents: ['@/src/graphql/_generated_/**/*.{graphql,gql}']
+  // projects: {
+  //   default: {
+
+  //     schema: '@/src/graphql/_generated_/graphql.schema.graphql',
+  //     documents: ['@/src/graphql/_generated_/**/*.{graphql,gql}']
+  //   }
+  // }
 }
 
 export default config
