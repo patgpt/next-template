@@ -16,16 +16,20 @@ const config: CodegenConfig = {
       plugins: [
         'typescript',
         'typescript-operations',
-        'schema-ast',
+
         'typescript-graphql-request',
         'typescript-resolvers'
       ],
       config: {
-        rawRequest: true
+        rawRequest: true,
+        dedupeFragments: true
       }
     },
-    'src/_generated_/graphql.schema.json': {
+    'src/graphql/_generated_/graphql.schema.json': {
       plugins: ['introspection']
+    },
+    'src/graphql/_generated_/graphql.schema.graphql': {
+      plugins: ['schema-ast']
     }
   }
 }

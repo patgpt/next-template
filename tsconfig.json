@@ -34,7 +34,13 @@
     }
   ],
   "types": ["node", "react", "react-dom", "./@types/*"],
-  "files": ["next-env.d.ts", "global.d.ts", ".prettierrc", "eslint.config.ts"],
+  "files": [
+    "next-env.d.ts",
+    "global.d.ts",
+    ".prettierrc",
+    "eslint.config.ts",
+    "graphql.config.ts"
+  ],
   "typeAcquisition": {
     "enable": true
   },
@@ -46,7 +52,8 @@
     "eslint/**/*.mjs",
 
     "global.d.ts",
-    ".prettierrc"
+    ".prettierrc",
+    "graphql.config.ts"
   ],
   "exclude": ["node_modules"]
 }

@@ -149,7 +149,11 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.graphql": "always",
       "source.organizeImports": "always"
-    }
+    },
+    "editor.suggest.showIcons": true,
+    "editor.suggest.showReferences": true,
+    "editor.suggest.showKeywords": true,
+    "editor.suggest.showColors": true
   },
   // GRAPHQL/Typescript Codegen
 

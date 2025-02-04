@@ -1,6 +1,9 @@
-query getPageBlotPost($locale: String, $preview: Boolean, $slug: String) {
-  pageBlogPostCollection(locale: $locale, preview: $preview, where: {slug: $slug}) {
+query getPageBlogPost($locale: String, $preview: Boolean, $slug: String) {
+  pageBlogPostCollection(locale: $locale, preview: $preview, where: { slug: $slug }) {
     items {
+      sys {
+        id
+      }
       internalName
       slug
       postTitle
@@ -11,8 +14,6 @@ query getPageBlotPost($locale: String, $preview: Boolean, $slug: String) {
         ...ImaageFragment
       }
       publishedDate
-
-
       seo {
         ...SeoFragment
       }
