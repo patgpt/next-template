@@ -15,11 +15,11 @@ const config: IGraphQLConfig = {
     },
     '@/src/graphql/_generated_/graphql.schema.graphql'
   ],
-  documents: ['@/src/graphql/**/*.{graphql,gql}'],
+  documents: ['@/src/graphql/_generated_/**/*.{graphql,gql}'],
   projects: {
     default: {
       schema: '@/src/graphql/_generated_/graphql.schema.graphql',
-      documents: ['@/src/graphql/**/*.{graphql,gql}']
+      documents: ['@/src/graphql/_generated_/**/*.{graphql,gql}']
     }
   }
 }
