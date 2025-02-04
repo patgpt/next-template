@@ -1,5 +1,6 @@
 import ErrorBoundary from '@/components/error-boundary'
 import NextIntlProvider from '@/components/providers/next-intl-provider'
+import NextThemeProvider from '@/components/providers/theme-provider'
 import React from 'react'
 
 /**
@@ -23,7 +24,9 @@ export default function Providers({
 }: ProvidersProps): React.ReactElement {
   return (
     <ErrorBoundary>
-      <NextIntlProvider>{children}</NextIntlProvider>
+      <NextThemeProvider>
+        <NextIntlProvider>{children}</NextIntlProvider>
+      </NextThemeProvider>
     </ErrorBoundary>
   )
 }

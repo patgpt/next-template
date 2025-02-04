@@ -8,6 +8,7 @@ import { getTranslations } from 'next-intl/server'
 import { geistMono, geistSans } from './fonts'
 
 // Import the routing configuration
+import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
 import { routing } from '@/i18n/routing'
 import { setRequestLocale } from 'next-intl/server'
@@ -38,11 +39,12 @@ export default async function RootLayout({
   // Enable static rendering
   setRequestLocale(locale)
   return (
-    <html lang={locale}>
+    <html data-theme="light" lang={locale}>
       <body className={cn(geistSans.variable, geistMono.variable)}>
         <Providers>
           <Header />
-          <main className="container m-auto h-screen w-full">{children}</main>
+          <main className="m-auto h-screen w-full">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

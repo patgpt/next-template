@@ -30,7 +30,7 @@
   "plugins": [
     {
       "name": "@0no-co/graphqlsp",
-      "schema": "./src/graphql/_generated_/schema.graphql"
+      "schema": "@/graphql/_generated_/graphql.schema.graphql"
     }
   ],
   "types": ["node", "react", "react-dom", "./@types/*"],
