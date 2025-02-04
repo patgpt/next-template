@@ -27,6 +27,12 @@
       "@/*": ["./src/*"]
     }
   },
+  "plugins": [
+    {
+      "name": "@0no-co/graphqlsp",
+      "schema": "./src/graphql/_generated_/schema.graphql"
+    }
+  ],
   "types": ["node", "react", "react-dom", "./@types/*"],
   "files": ["next-env.d.ts", "global.d.ts", ".prettierrc", "eslint.config.ts"],
   "typeAcquisition": {

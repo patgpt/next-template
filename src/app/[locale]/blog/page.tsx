@@ -1,5 +1,5 @@
 import { Link } from '@/i18n/routing'
-import { getBlogPostCollection } from '@/queries'
+import { getBlogPostCollection } from '@/lib/client'
 import { notFound } from 'next/navigation'
 
 async function Page() {
@@ -8,7 +8,7 @@ async function Page() {
     return notFound()
   }
   return (
-    <div className="container grid lg:grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">
+    <div className="container grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
         <Link href={`blog/${post.fields.slug}`} key={post.sys.id}>
           <h2>{post.fields.title}</h2>

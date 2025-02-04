@@ -1,0 +1,11 @@
+fragment SeoFragment on ComponentSeo {
+  sys {
+    id
+  }
+  seoTitle
+  seoDescription
+  seoImage {
+    ...ImaageFragment
+  }
+}
+

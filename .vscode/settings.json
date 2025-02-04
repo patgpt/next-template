@@ -150,5 +150,8 @@
       "source.fixAll.graphql": "always",
       "source.organizeImports": "always"
     }
-  }
+  },
+  // GRAPHQL/Typescript Codegen
+
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

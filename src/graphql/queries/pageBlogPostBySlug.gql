@@ -1,0 +1,21 @@
+query getPageBlotPost($locale: String, $preview: Boolean, $slug: String) {
+  pageBlogPostCollection(locale: $locale, preview: $preview, where: {slug: $slug}) {
+    items {
+      internalName
+      slug
+      postTitle
+      postContent {
+        json
+      }
+      featuredImage {
+        ...ImaageFragment
+      }
+      publishedDate
+
+
+      seo {
+        ...SeoFragment
+      }
+    }
+  }
+}

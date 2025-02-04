@@ -1,7 +1,7 @@
 import type { PageParams } from '@/@types/types'
 import { routing } from '@/i18n/routing'
 
-import { getBlogPostCollection } from '@/queries'
+import { getBlogPostCollection } from '@/lib/client'
 import { console } from 'inspector'
 import { notFound } from 'next/navigation'
 
