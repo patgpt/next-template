@@ -11,19 +11,36 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "checkJs": true,
     "jsx": "preserve",
     "incremental": true,
+    "resolvePackageJsonExports": true,
+    "resolvePackageJsonImports": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
+    "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "eslint/**/*.mjs"],
+  "types": ["node", "react", "react-dom", "./@types/*"],
+  "files": ["next-env.d.ts", "global.d.ts", ".prettierrc", "eslint.config.ts"],
+  "typeAcquisition": {
+    "enable": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "eslint/**/*.mjs",
+
+    "global.d.ts",
+    ".prettierrc"
+  ],
   "exclude": ["node_modules"]
 }

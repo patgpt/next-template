@@ -1,0 +1,154 @@
+{
+  // ESLint
+  "eslint.codeActionsOnSave.mode": "all",
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.enable": true,
+  "eslint.useFlatConfig": true,
+
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "json"
+  ],
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue", ".html", ".json"]
+  },
+
+  // Editor
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always",
+    "source.fixAll.tslint": "always",
+    "prettier.format": "always"
+  },
+
+  // Prettier
+  "prettier.enable": true,
+  "prettier.configPath": ".prettierrc",
+  "prettier.prettierPath": "./node_modules/prettier",
+
+  // JSON
+  "json.format.enable": true,
+  "json.validate.enable": true,
+
+  // Markdown
+  "markdown.links.openLocation": "currentGroup",
+  "markdown.suggest.paths.enabled": true,
+  "markdown.validate.enabled": true,
+  "markdown.updateLinksOnFileMove.enabled": "always",
+
+  // VS Intellicode
+  "vsintellicode.typescript.completionsEnabled": true,
+
+  // COPILOT
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": ".copilot-instructions.md"
+    },
+    {
+      "text": "Alwways use the latest version of the library"
+    },
+    {
+      "text": "Always use bun for package management"
+    },
+    {
+      "text": "Always add TSDoc comments"
+    },
+    {
+      "text": "Always put 'use client' in the top of the file if you are using react state or hooks"
+    }
+  ],
+  "github.copilot.chat.completionContext.typescript.mode": "on",
+  "github.copilot.renameSuggestions.triggerAutomatically": true,
+  "github.copilot.advanced": {
+    "enabled": true
+  },
+  "github.copilot.chat.fixTestFailure.enabled": true,
+  "github.copilot.chat.followUps": "always",
+  "github.copilot.chat.setupTests.enabled": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.search.semanticTextResults": true,
+  "github.copilot.chat.temporalContext.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit message format with an emoji"
+    }
+  ],
+  "github.copilot.editor.enableCodeActions": true,
+  "github.copilot.chat.reviewSelection.enabled": true,
+  // TypeScript
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.paths": true,
+  "typescript.suggest.completeJSDocs": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.suggest.enabled": true,
+  "typescript.autoClosingTags": true,
+
+  // Tailwind CSS
+  "tailwindCSS.colorDecorators": true,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "javascriptreact": "javascriptreact",
+    "typescriptreact": "typescriptreact",
+    "html": "html",
+    "vue": "vue",
+    "markdown": "markdown"
+  },
+  "tailwindCSS.validate": true,
+  "tailwindCSS.suggestions": true,
+  "tailwindCSS.codeActions": true,
+  "tailwindCSS.hovers": true,
+  "terminal.integrated.enableFileLinks": "on",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.suggest.builtinCompletions": {
+    "git": true,
+    "npm": true,
+    "npx": true,
+    "yarn": true,
+    "pnpm": true,
+    "tsc": true,
+    "node": true,
+    "nvm": true,
+    "brew": true,
+    "docker": true,
+    "docker-compose": true,
+    "bun": true,
+    "gh": true,
+    "code": true
+  },
+  "workbench.commandPalette.experimental.suggestCommands": true,
+  "workbench.commandPalette.history": 50,
+  // Editor settings
+  "editor.smoothScrolling": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+
+  // Graphql
+  "[graphql]": {
+    "editor.defaultFormatter": "GraphQL.vscode-graphql",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.graphql": "always",
+      "source.organizeImports": "always"
+    }
+  }
+}

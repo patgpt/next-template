@@ -1,6 +1,52 @@
 {
   "HomePage": {
     "title": "Bonjour le monde!",
-    "about": "Aller à la page À propos"
+    "about": "Aller à la page à propos"
+  },
+  "AboutPage": {
+    "title": "À propos",
+    "home": "Aller à la page d'accueil"
+  },
+  "NotFoundPage": {
+    "title": "Page non trouvée",
+    "home": "Aller à la page d'accueil"
+  },
+  "LanguageSelector": {
+    "label": "Langue",
+    "en": "Anglais",
+    "fr": "Français"
+  },
+  "Menu": {
+    "home": "Accueil",
+    "about": "À propos"
+  },
+  "Footer": {
+    "madeWithLove": "Fait avec amour ❤️ par Patrick Kelly",
+    "visitMyGithub": "Visitez mon profil GitHub",
+    "visitMyTwitter": "Visitez mon profil Twitter",
+    "visitMyLinkedIn": "Visitez mon profil LinkedIn",
+    "copyRight": "© 2025 Tous droits réservés"
+  },
+  "Settings": {
+    "appTitle": "Patrick Kelly",
+    "title": "Paramètres",
+    "language": "Langue"
+  },
+  "UI": {
+    "darkMode": "Mode sombre",
+    "lightMode": "Mode clair",
+    "theme": "Thème"
+  },
+  "ErrorPage": {
+    "Message": "Quelque chose s'est mal passé!",
+    "TryAgain": "Essayer à nouveau"
+  },
+  "A11y": {
+    "errorHeading": "En-tête de la page d'erreur",
+    "resetButton": "Réinitialiser la page et réessayer"
+  },
+  "LayoutPage": {
+    "metaTitle": "Modèle Nextjs par Patrick Kelly",
+    "metaDescription": "Un modèle complet avec des configurations personnalisées pour créer des applications avec nextjs et contentful"
   }
 }

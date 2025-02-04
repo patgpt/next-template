@@ -2,5 +2,51 @@
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"
-  }
+  },
+    "AboutPage": {
+        "title": "About page",
+        "home": "Go to the home page"
+    },
+    "NotFoundPage": {
+        "title": "Page not found",
+        "home": "Go to the home page"
+    },
+    "LanguageSelector": {
+        "label": "Language",
+        "en": "English",
+        "fr": "French"
+    },
+    "Menu": {
+        "home": "Home",
+        "about": "About"
+    },
+    "Footer": {
+        "madeWithLove": "Made with love ❤️ by Patrick Kelly",
+        "visitMyGithub": "Visit my GitHub profile",
+        "visitMyTwitter": "Visit my Twitter profile",
+        "visitMyLinkedIn": "Visit my LinkedIn profile",
+        "copyRight": "© 2025 All rights reserved"
+    },
+    "Settings":{
+        "appTitle": "Patrick Kelly",
+        "title": "Settings",
+        "language": "Language"
+    },
+    "UI":{
+        "darkMode": "Dark Mode",
+        "lightMode": "Light Mode",
+        "theme": "Theme"
+    },
+    "ErrorPage": {
+        "Message": "Something went wrong!",
+        "TryAgain": "Try again"
+    },
+    "A11y": {
+        "errorHeading": "Error page heading",
+        "resetButton": "Reset page and try again"
+    },
+    "LayoutPage": {
+        "metaTitle": "Nextjs Template by Patrick Kelly",
+        "metaDescription": "A fully featured, template with opinionated configurations for building apps with nextjs and contentful"
+    }
 }
