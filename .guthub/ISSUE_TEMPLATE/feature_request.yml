@@ -1,31 +1,31 @@
 # feature_request.yml
 ---
-name: "🚀 Feature Request"
-description: "Suggest an improvement or new feature."
-labels: ["enhancement"]
+name: 'Feature Request'
+description: 'Suggest an improvement or new feature.'
+labels: ['enhancement']
 body:
   - type: markdown
     attributes:
-      value: "### 🚀 Feature Request\nDescribe the feature you would like to see."
+      value: "### Feature Request\nDescribe the feature you would like to see."
   - type: input
     id: feature-summary
     attributes:
-      label: "Brief Summary"
-      description: "Provide a one-line summary of your feature request."
-      placeholder: "Example: Add dark mode support."
+      label: 'Brief Summary'
+      description: 'Provide a one-line summary of your feature request.'
+      placeholder: 'Example: Add dark mode support.'
     validations:
       required: true
   - type: textarea
     id: feature-details
     attributes:
-      label: "Feature Details"
-      description: "Describe the feature and its benefits."
+      label: 'Feature Details'
+      description: 'Describe the feature and its benefits.'
     validations:
       required: true
   - type: textarea
     id: use-case
     attributes:
-      label: "Use Case"
-      description: "Explain how this feature will be useful."
+      label: 'Use Case'
+      description: 'Explain how this feature will be useful.'
     validations:
       required: true

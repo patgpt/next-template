@@ -1,34 +1,34 @@
-name: "✅ Task"
-description: "Track a task or to-do item."
-labels: ["task"]
+name: 'Task'
+description: 'Track a task or to-do item.'
+labels: ['task']
 body:
   - type: markdown
     attributes:
-      value: "### ✅ Task\nOutline the task and any relevant details."
+      value: "### Task\nOutline the task and any relevant details."
   - type: input
     id: task-summary
     attributes:
-      label: "Task Summary"
-      description: "Provide a brief summary of the task."
-      placeholder: "Example: Implement caching for API responses."
+      label: 'Task Summary'
+      description: 'Provide a brief summary of the task.'
+      placeholder: 'Example: Implement caching for API responses.'
     validations:
       required: true
   - type: textarea
     id: task-details
     attributes:
-      label: "Task Details"
-      description: "Describe the task in detail, including any dependencies or considerations."
+      label: 'Task Details'
+      description: 'Describe the task in detail, including any dependencies or considerations.'
     validations:
       required: true
   - type: textarea
     id: expected-outcome
     attributes:
-      label: "Expected Outcome"
-      description: "What is the desired result of completing this task?"
+      label: 'Expected Outcome'
+      description: 'What is the desired result of completing this task?'
     validations:
       required: true
   - type: textarea
     id: additional-notes
     attributes:
-      label: "Additional Notes"
-      description: "Any extra context, links, or references related to the task."
+      label: 'Additional Notes'
+      description: 'Any extra context, links, or references related to the task.'
