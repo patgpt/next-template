@@ -1,3 +1,9 @@
+/**
+ * Hero component
+ *
+ * @description A component that displays a hero section with a title, description, and button
+ * @returns A hero section with a title, description, and button
+ */
 function Hero() {
   return (
     <div className="hero bg-base-200 min-h-screen">

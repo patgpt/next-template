@@ -1,9 +1,0 @@
-@import 'tailwindcss';
-/* @plugin "tailwindcss/typography"; */
-@import url('daisyui/dist/full.css');
-@plugin "daisyui";
-
-@variant dark (&:where([data-theme=light], [data-theme=dark] *));
-
-:root {
-}

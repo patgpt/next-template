@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -24,13 +28,20 @@
     "rootDir": ".",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/graphql/*": ["./src/graphql/*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/i18n/*": ["./src/i18n/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/generated/*": ["./src/graphql/_generated_/*"]
     }
   },
   "plugins": [
     {
       "name": "@0no-co/graphqlsp",
-      "schema": "@/graphql/_generated_/graphql.schema.graphql"
+      "schema": "./src/graphql/_generated_/graphql.schema.graphql"
     }
   ],
   "types": ["node", "react", "react-dom", "./@types/*"],
@@ -46,14 +57,19 @@
   },
   "include": [
     "next-env.d.ts",
+    "**/*.graphql",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "eslint/**/*.mjs",
-
     "global.d.ts",
     ".prettierrc",
-    "graphql.config.ts"
+    "graphql.config.ts",
+    "src/styles/typography.config.js",
+    "src/types/*.d.ts",
+    "src/graphql/**/*.graphql",
+    "src/graphql/_generated_/**/*.ts",
+    "./codegen.ts"
   ],
   "exclude": ["node_modules"]
 }

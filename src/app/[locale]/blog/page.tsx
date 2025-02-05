@@ -2,6 +2,12 @@ import { Link } from '@/i18n/routing'
 import { getBlogPostCollection } from '@/lib/client'
 import { notFound } from 'next/navigation'
 
+/**
+ * Blog page component
+ *
+ * @description A component that displays a blog page
+ * @returns A blog page
+ */
 async function Page() {
   const posts = await getBlogPostCollection()
   if (!posts) {

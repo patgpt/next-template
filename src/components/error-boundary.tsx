@@ -2,21 +2,18 @@
 
 import React from 'react'
 
-/**
- * Interface for ErrorBoundary state
- */
+// Define the state for the error boundary
 interface ErrorBoundaryState {
   hasError: boolean
   error?: Error
 }
 
-/**
- * Interface for ErrorBoundary props
- */
+// Define the props for the error boundary
 interface ErrorBoundaryProps {
   children: React.ReactNode
 }
 
+// Define the error boundary component
 class ErrorBoundary extends React.Component<
   ErrorBoundaryProps,
   ErrorBoundaryState

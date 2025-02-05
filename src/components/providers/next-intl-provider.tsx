@@ -4,15 +4,15 @@ import { getMessages } from 'next-intl/server'
 import type { ReactNode } from 'react'
 
 /**
- * Props interface for the NextIntlProvider component
+ * NextIntlProviderProps interface
+ *
+ * @description Defines the props for the NextIntlProvider component
  */
 export interface NextIntlProviderProps {
   children: ReactNode
 }
 
-/**
- * Default formats for date, time, currency and list formatting
- */
+// Default formats for date, time, currency and list formatting
 const DEFAULT_FORMATS: Formats = {
   dateTime: {
     short: { day: 'numeric', month: 'short', year: 'numeric' }
@@ -26,7 +26,9 @@ const DEFAULT_FORMATS: Formats = {
 }
 
 /**
- * Handles internationalization errors in a type-safe way
+ * Error handler for i18n errors
+ *
+ * @param error - The error object
  */
 const handleError = (error: IntlError): void => {
   console.error('[i18n Error]:', {
@@ -37,9 +39,9 @@ const handleError = (error: IntlError): void => {
 }
 
 /**
- * NextIntlProvider component that provides internationalization context
- * to the application using next-intl
+ * NextIntlProvider component
  *
+ * @description A component that provides internationalization context to the application using next-intl
  * @param props - Component properties
  * @returns Internationalized provider wrapped around children
  */

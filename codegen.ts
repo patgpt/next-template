@@ -1,35 +1,43 @@
-import type { CodegenConfig } from '@graphql-codegen/cli'
-import dotenv from 'dotenv'
-import { contentfulConfig } from './src/lib/contentful-config'
+// codegen.ts
 
-dotenv.config()
+import { contentfulConfig } from '@/lib/contentful-config'
+import { CodegenConfig } from '@graphql-codegen/cli'
 
+/**
+ * Codegen configuration
+ *
+ * @description Defines the configuration for the GraphQL code generation
+ * @returns The codegen configuration
+ */
 const config: CodegenConfig = {
-  overwrite: true,
-  watch: true,
-  schema: `${contentfulConfig.graphqlEndpoint}?access_token=${contentfulConfig.accessToken}`,
-  documents: 'src/graphql/**/*.(ts|gql|graphql)',
-  generates: {
-    'src/graphql/_generated_/sdk.ts': {
-      // preset: 'client',
-      watchPattern: 'src/graphql/**/*.(ts|gql|graphql)',
-      plugins: [
-        'typescript',
-        'typescript-operations',
-
-        'typescript-graphql-request',
-        'typescript-resolvers'
-      ],
-      config: {
-        rawRequest: true,
-        dedupeFragments: true
+  schema: [
+    {
+      [contentfulConfig.graphqlEndpoint]: {
+        headers: {
+          Authorization: `Bearer ${contentfulConfig.accessToken}`
+        }
       }
     },
-    'src/graphql/_generated_/graphql.schema.json': {
-      plugins: ['introspection']
+    './src/graphql/schema.graphql'
+  ],
+  documents: './src/graphql/operations/**/*.graphql',
+  generates: {
+    './src/graphql/generated/': {
+      preset: 'client',
+      plugins: [],
+      config: {
+        enumsAsTypes: true,
+        skipTypename: true
+      }
     },
-    'src/graphql/_generated_/graphql.schema.graphql': {
-      plugins: ['schema-ast']
+    './src/graphql/resolvers-types.ts': {
+      plugins: ['typescript', 'typescript-resolvers'],
+      config: {
+        contextType: '@/lib/contentful-client#ContentfulContext',
+        mappers: {
+          Post: '@/graphql/generated/types#Post'
+        }
+      }
     }
   }
 }

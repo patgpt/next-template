@@ -4,7 +4,9 @@ import NextThemeProvider from '@/components/providers/theme-provider'
 import React from 'react'
 
 /**
- * Props for the Providers component
+ * ProvidersProps interface
+ *
+ * @description Defines the props for the Providers component
  */
 interface ProvidersProps {
   children: React.ReactNode

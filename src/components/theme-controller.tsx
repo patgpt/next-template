@@ -2,6 +2,9 @@ import { FaMoon, FaSun } from 'react-icons/fa'
 
 /**
  * ThemeController component with DaisyUI styling
+ *
+ * @description A component that allows the user to toggle the theme of the application
+ * @returns A component that allows the user to toggle the theme of the application
  */
 function ThemeController() {
   return (

@@ -3,7 +3,13 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 import { FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6'
 
-function Header(): React.ReactElement {
+/**
+ * Footer component
+ *
+ * @description A component that displays a footer with a copyright message and social media links
+ * @returns A footer with a copyright message and social media links
+ */
+function Footer(): React.ReactElement {
   const t = useTranslations()
   return (
     <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
@@ -40,4 +46,4 @@ function Header(): React.ReactElement {
   )
 }
 
-export default Header
+export default Footer

@@ -3,6 +3,13 @@
  */
 import dotenv from 'dotenv'
 dotenv.config()
+
+/**
+ * Contentful API configuration
+ *
+ * @description Configuration for the Contentful API
+ * @returns Contentful API configuration
+ */
 export const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID!,
   environmentId: process.env.CONTENTFUL_ENVIRONMENT_ID || 'master',

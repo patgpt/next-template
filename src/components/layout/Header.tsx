@@ -4,6 +4,12 @@ import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
+/**
+ * Header component
+ *
+ * @description A component that displays a header with a navigation menu and a logo
+ * @returns A header with a navigation menu and a logo
+ */
 function Header(): React.ReactElement {
   const t = useTranslations()
   return (
@@ -85,6 +91,12 @@ function Header(): React.ReactElement {
 
 export default Header
 
+/**
+ * Navigation component
+ *
+ * @description A component that displays a navigation menu
+ * @returns A navigation menu
+ */
 const Navigation = (): React.ReactElement => {
   const t = useTranslations()
   return (

@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@plugin "@tailwindcss/typography";
+@plugin 'daisyui';
+@variant dark (&:where([data-theme=light], [data-theme=dark] *));
+:root {
+  --font-family: var(--font-geist-sans);
+}
+
+@theme {
+  --default-font-family: var(--font-family);
+}

@@ -1,0 +1,10 @@
+query GetPosts($locale: String!, $preview: Boolean!) {
+  pageBlogPostCollection(locale: $locale, preview: $preview) {
+    items {
+      sys {
+        id
+      }
+      slug
+    }
+  }
+}

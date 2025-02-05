@@ -5,6 +5,12 @@ import { getBlogPostCollection } from '@/lib/client'
 import { console } from 'inspector'
 import { notFound } from 'next/navigation'
 
+/**
+ * Generate static parameters for the blog page
+ *
+ * @description Generates static parameters for the blog page
+ * @returns Static parameters for the blog page
+ */
 export async function generateStaticParams() {
   const getPosts = async () => await getBlogPostCollection()
   const posts = await getPosts()
@@ -21,6 +27,13 @@ export async function generateStaticParams() {
   return result
 }
 
+/**
+ * Blog page component
+ *
+ * @description A component that displays a blog page
+ * @param params - Component params
+ * @returns A blog page
+ */
 async function Page({ params }: PageParams): Promise<React.ReactElement> {
   const { locale, slug } = await params
   console.log(locale, slug, 'locale, slug')

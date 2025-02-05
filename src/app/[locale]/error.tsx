@@ -4,7 +4,9 @@ import { useTranslations } from 'next-intl'
 import { useEffect } from 'react'
 
 /**
- * Interface for Error component props
+ * ErrorProps interface
+ *
+ * @description Defines the props for the Error component
  */
 interface ErrorProps {
   /** The error object that was thrown */
@@ -14,14 +16,11 @@ interface ErrorProps {
 }
 
 /**
- * Error Page component for handling runtime errors in the application
+ * Error component
  *
- * @component
- * @param {ErrorProps} props - Component props
- * @param {Error} props.error - The error object that was thrown
- * @param {Function} props.reset - Function to reset the error boundary
- * @returns A styled error NextPage Component
- *
+ * @description A component that displays an error page
+ * @param props - Component props
+ * @returns An error page
  */
 export default function Error({ error, reset }: ErrorProps) {
   const t = useTranslations()

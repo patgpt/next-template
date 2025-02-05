@@ -6,21 +6,25 @@ import { useSelectedLayoutSegment } from 'next/navigation'
 import { ComponentProps } from 'react'
 
 /**
- * Navigation link variants
+ * NavigationLink variant type
+ *
+ * @description Defines the variant type for the NavigationLink component
  */
 export type NavigationLinkVariant = 'header' | 'footer'
 
 /**
- * Props for the NavigationLink component
+ * NavigationLinkProps interface
+ *
+ * @description Defines the props for the NavigationLink component
  */
 interface NavigationLinkProps extends ComponentProps<typeof Link> {
   variant?: NavigationLinkVariant
 }
 
 /**
- * NavigationLink component that supports different visual variants
- * and automatically handles active states
+ * NavigationLink component
  *
+ * @description A component that displays a navigation link with different variants and active states
  * @param props - Component props including variant and standard Link props
  * @returns A styled navigation link component
  */
