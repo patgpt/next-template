@@ -1,6 +1,6 @@
 ## Cursor Rules
 
-### General Rules
+General Rules:
 
 1. **Verify Information**: Always verify information before presenting it. Do not make assumptions or speculate without clear evidence.
 2. **File-by-File Changes**: Make changes file by file and allow for review before proceeding.
@@ -18,7 +18,7 @@
 14. **No Current Implementation Details**: Do not discuss the existing implementation unless specifically requested.
 15. **Check Context Generated File Content**: Always check the file for current contents before making changes.
 
-### Code Quality and Best Practices
+Code Quality and Best Practices:
 
 16. **Use Explicit Variable Names**: Prefer descriptive and explicit variable names.
 17. **Follow Consistent Coding Style**: Maintain the existing project coding style.
@@ -32,7 +32,7 @@
 25. **Consider Edge Cases**: Always factor in potential edge cases.
 26. **Use Assertions**: Implement assertions to validate assumptions and catch errors early.
 
-### Bun Package Manager Best Practices
+Bun Package Manager Best Practices:
 
 - Use `bun install` instead of `npm install` for dependency management.
 - Prefer `bun run` over `npm run` for script execution.
@@ -40,7 +40,7 @@
 - Optimize for Bun’s native performance advantages where applicable.
 - Use Bun’s built-in utilities for file handling and HTTP requests when feasible.
 
-### GraphQL Best Practices
+GraphQL Best Practices:
 
 - Define clear and reusable schema types to improve maintainability.
 - Use descriptive field names and ensure proper documentation for queries and mutations.
@@ -50,7 +50,7 @@
 - Optimize resolvers to avoid N+1 query issues.
 - Utilize GraphQL caching mechanisms to improve performance.
 
-### GraphQL Code Generator Best Practices
+GraphQL Code Generator Best Practices:
 
 - Configure `graphql-codegen` to generate TypeScript types for queries and mutations.
 - Use `graphql-codegen` to generate React hooks for data fetching.
@@ -58,7 +58,7 @@
 - Leverage plugins such as `typescript-operations` and `graphql-request` for improved developer experience.
 - Regularly update the GraphQL schema and regenerate types to maintain consistency.
 
-### Next.js App Router Best Practices
+Next.js App Router Best Practices:
 
 - Use server components by default.
 - Implement client components only when necessary.
@@ -67,41 +67,20 @@
 - Implement `loading.ts` for loading states.
 - Use `error.ts` for error handling.
 - Utilize route handlers for API routes.
-  s
 
-### Folder Structure
+Additional Instructions:
 
-```
-./
-  src
-    app/
-      [locale]/
-          page.ts
-    layout.ts
-    components/
-    lib/
-    utils/
-    @types/
-    graphql/
-      generated/
-    styles/
-    i18n/
-    public/
-```
+- Use TypeScript for type safety.
+- Implement proper metadata for SEO.
+- Utilize Next.js Image component for optimized images.
+- Use Tailwind CSS for styling.
+- Implement proper error boundaries.
+- Follow Next.js naming conventions for special files.
+- Use environment variables for configuration.
+- Use `nextjs@15.x.x`.
+- Use `Tailwind@4.x.x`.
 
-### Additional Instructions
-
-1. Use TypeScript for type safety.
-2. Implement proper metadata for SEO.
-3. Utilize Next.js Image component for optimized images.
-4. Use Tailwind CSS for styling.
-5. Implement proper error boundaries.
-6. Follow Next.js naming conventions for special files.
-7. Use environment variables for configuration.
-8. Use `nextjs@15.x.x`.
-9. Use `Tailwind@4.x.x`.
-
-### Development Principles
+Development Principles:
 
 - Use functional, declarative programming.
 - Prefer iteration and modularization over duplication.
@@ -110,13 +89,13 @@
 - Use explicit and descriptive variable names.
 - Keep code structure consistent: exported component, subcomponents, helpers, static content, and types.
 
-### Documentation and Type Safety
+Documentation and Type Safety:
 
 - Document all code using **TSDoc** to ensure clarity and maintainability.
 - Always use **official third-party provided types** when available.
 - Define explicit **types for functions, return values, and parameters** to ensure strong type safety.
 
-### Error Handling and Validation
+Error Handling and Validation:
 
 - Handle errors at the start of functions.
 - Use early returns for invalid states.
@@ -124,7 +103,7 @@
 - Avoid unnecessary `else` statements, use `if-return` pattern.
 - Use guard clauses for validation.
 
-### React & Next.js Best Practices
+React & Next.js Best Practices:
 
 - Use functional components and TypeScript interfaces.
 - Minimize `use client`, `useEffect`, and `setState`.
@@ -135,20 +114,20 @@
 - Ensure server actions return `ActionResponse` type.
 - Use `next-safe-action` for all server actions.
 
-### Key Conventions
+Key Conventions:
 
-1. Rely on Next.js App Router for state changes.
-2. Prioritize Web Vitals (LCP, CLS, FID).
-3. Follow official Next.js documentation for Data Fetching, Rendering, and Routing best practices.
-4. Ensure reusability in components and follow existing design patterns.
-5. Validate user inputs and handle errors gracefully.
-6. Use `nuqs` for URL search parameter state management.
-7. Implement proper accessibility and performance optimizations.
-8. Use `bun` for dependency management.
-9. Use `bunx` for package execution.
-10. Use `bunfig.toml` for configuration.
+- Rely on Next.js App Router for state changes.
+- Prioritize Web Vitals (LCP, CLS, FID).
+- Follow official Next.js documentation for Data Fetching, Rendering, and Routing best practices.
+- Ensure reusability in components and follow existing design patterns.
+- Validate user inputs and handle errors gracefully.
+- Use `nuqs` for URL search parameter state management.
+- Implement proper accessibility and performance optimizations.
+- Use `bun` for dependency management.
+- Use `bunx` for package execution.
+- Use `bunfig.toml` for configuration.
 
-### JavaScript/TypeScript Best Practices
+JavaScript/TypeScript Best Practices:
 
 - Use `function` keyword for pure functions.
 - Omit semicolons.
@@ -156,20 +135,20 @@
 - Avoid enums, use maps instead.
 - Maintain concise one-line conditionals where applicable.
 
-### UI and Styling Guidelines
+UI and Styling Guidelines:
 
 - Use Daisy UI, Shadcn UI, Radix UI, and Tailwind CSS.
 - Implement a mobile-first responsive design.
 - Utilize Tailwind Aria for accessible components.
 
-### Performance Optimization
+Performance Optimization:
 
 - Minimize `use client`, `useEffect`, and `setState`.
 - Wrap client components in Suspense with fallback.
 - Use dynamic imports for non-critical components.
 - Optimize images: use WebP, set sizes, and enable lazy loading.
 
-### Server Actions and Error Boundaries
+Server Actions and Error Boundaries:
 
 - Model expected errors as return values instead of `try/catch`.
 - Implement error boundaries using `error.tsx` and `global-error.tsx`.
