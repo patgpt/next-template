@@ -1,8 +1,23 @@
 // codegen.ts
 
-import { contentfulConfig } from '@/lib/contentful-config'
 import { CodegenConfig } from '@graphql-codegen/cli'
+import contentfulConfig from './src/lib/contentful-config'
 
+/**
+ * GraphQL schema configuration
+ *
+ * @description Defines the configuration for the GraphQL schema
+ * @returns The schema configuration
+ */
+const schema: CodegenConfig['schema'] = [
+  {
+    [contentfulConfig.graphqlEndpoint]: {
+      headers: {
+        Authorization: `Bearer ${contentfulConfig.accessToken}`
+      }
+    }
+  }
+]
 /**
  * Codegen configuration
  *
@@ -10,32 +25,23 @@ import { CodegenConfig } from '@graphql-codegen/cli'
  * @returns The codegen configuration
  */
 const config: CodegenConfig = {
-  schema: [
-    {
-      [contentfulConfig.graphqlEndpoint]: {
-        headers: {
-          Authorization: `Bearer ${contentfulConfig.accessToken}`
-        }
-      }
-    },
-    './src/graphql/schema.graphql'
-  ],
-  documents: './src/graphql/operations/**/*.graphql',
+  schema,
+  documents: './src/graphql/operations/**/*.(graphql|gql)',
   generates: {
     './src/graphql/generated/': {
       preset: 'client',
-      plugins: [],
+      plugins: ['typescript', 'typescript-operations', 'typescript-resolvers'],
       config: {
         enumsAsTypes: true,
         skipTypename: true
       }
     },
-    './src/graphql/resolvers-types.ts': {
+    './src/graphql/generated/resolvers-types.ts': {
       plugins: ['typescript', 'typescript-resolvers'],
       config: {
-        contextType: '@/lib/contentful-client#ContentfulContext',
+        contextType: '@/graphql/contentful-context#ContentfulContext',
         mappers: {
-          Post: '@/graphql/generated/types#Post'
+          PageBlogPost: '@/graphql/generated/graphql#PageBlogPost'
         }
       }
     }
